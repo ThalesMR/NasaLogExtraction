@@ -1,5 +1,5 @@
 # NasaLogExtraction
-
+## To Build and Run
 * 1)extrair o projeto
 * 2)entrar na pasta do projeto
 * 3)compilar o projeto usando o sbt , ex: ```"sbt publish-local" ```ou ```"sbt package"```
@@ -8,7 +8,7 @@
 * 6)não esquecer que o projeto espera que exista uma pasta chamada ```"log"``` dentro do path ```"/path/to/folder/where"```, ou seja ```"/path/to/folder/where/log"``` onde os arquivos de log da nasa devem estar
 * 7)Após rodar o job, o mesmo gera um arquivo ```"~/respostas.txt"``` contendo as respostas
 
-
+## Porpose
 Job visa responder as seguintes perguntas:
 HTTP requests to the NASA Kennedy Space Center WWW server
 Esses dois conjuntos de dados possuem todas as requisições HTTP para o servidor da NASA Kennedy
@@ -30,7 +30,7 @@ Responda as seguintes questões devem ser desenvolvidas em Spark utilizando a su
 4. Quantidade de erros 404 por dia.
 5. O total de bytes retornados.
 
-
+## Chalenge Questions
 Qual o objetivo do comando cache ​em Spark?
 Persistir em memória todas as transformações feita ao seu conjunto de dados , de forma que esse dado não precise ser recriado e passar por todas as transformações anteriores ao momento.
 
