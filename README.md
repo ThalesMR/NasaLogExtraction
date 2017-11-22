@@ -15,6 +15,7 @@ Esses dois conjuntos de dados possuem todas as requisições HTTP para o servido
 Space Center WWW na Flórida para um período específico
 
 Os logs estão em arquivos ASCII com uma linha por requisição com as seguintes colunas:
+
 ● Host fazendo a requisição​. Um hostname quando possível, caso contrário o endereço de internet se o nome
 não puder ser identificado.
 ● Timestamp ​no formato "DIA/MÊS/ANO HH:MM:SS YYYY"
@@ -48,13 +49,13 @@ No ReduceByKey o Spark sabe que pode combinar as saidas de mesma chave antes de 
 Já no GroupByKey será feita a transferencia de toda a informação de mesma chave para a mesma maquina no cluster e depois será aplicada a função para reduzir o dado.
 
 Explique o que o código Scala abaixo faz.
-
+'''
 val textFile = sc.textFile("hdfs://...")
 val counts = textFile.flatMap(line => line.split(" "))
 .map(word => (word, 1))
 .reduceByKey(_ + _)
 counts.saveAsTextFile("hdfs://...")
-
+'''
 Basicamente lê um(ns) arquivo(s), para criar um conjunto de dados, divide esse conjunto de dados em palavras, conta quantas vezes essas palavras aparecem e depois grava em um arquivo texto esse conjunto de dados no formato (String, Int), onde a chave é a palavra e a saída é a quantidade de vezes que essa palavra aparece.
 
 
