@@ -1,12 +1,12 @@
 # NasaLogExtraction
 
-1)extrair o projeto
-2)entrar na pasta do projeto
-3)compilar o projeto usando o sbt , ex: ```"sbt publish-local" ```ou ```"sbt package"```
-4)Pegar o jar gerado pelo pablish-local e colocar na pasta ```"~/"``` da maquina com spark
-5)usar o seguinte comando no terminal linux para rodar o job ```"spark-submit --class br.com.nasa.run.NasaLogJob --master yarn http_nasa_thales_2.10.jar /path/to/folder/where"```
-6)*não esquecer que o projeto espera que exista uma pasta chamada "log" dentro do path "/path/to/folder/where", ou seja "/path/to/folder/where/log" onde os arquivos de log da nasa devem estar
-7)Após rodar o job, o mesmo gera um arquivo ```"~/respostas.txt"``` contendo as respostas
+* 1)extrair o projeto
+* 2)entrar na pasta do projeto
+* 3)compilar o projeto usando o sbt , ex: ```"sbt publish-local" ```ou ```"sbt package"```
+* 4)Pegar o jar gerado pelo pablish-local e colocar na pasta ```"~/"``` da maquina com spark
+* 5)usar o seguinte comando no terminal linux para rodar o job ```"spark-submit --class br.com.nasa.run.NasaLogJob --master yarn http_nasa_thales_2.10.jar /path/to/folder/where"```
+* 6)não esquecer que o projeto espera que exista uma pasta chamada ```"log"``` dentro do path ```"/path/to/folder/where"```, ou seja ```"/path/to/folder/where/log"``` onde os arquivos de log da nasa devem estar
+* 7)Após rodar o job, o mesmo gera um arquivo ```"~/respostas.txt"``` contendo as respostas
 
 
 Job visa responder as seguintes perguntas:
